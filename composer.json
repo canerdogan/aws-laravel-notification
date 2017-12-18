@@ -1,9 +1,15 @@
 {
-    "name": "peec/aws-laravel-notification",
+    "name": "canerdogan/aws-laravel-notification",
     "description": "Send SMS using AWS SNS services",
-    "homepage": "https://github.com/peec/aws-laravel-notification",
+    "homepage": "https://github.com/canerdogan/aws-laravel-notification",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Can Erdogan",
+            "email": "can@canerdogan.net",
+            "homepage": "https://canerdogan.net",
+            "role": "CTO at Istanbay"
+        },
         {
             "name": "Petter Kjelkenes",
             "email": "kjelkenes@gmail.com",
@@ -36,5 +42,17 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "component": "package",
+        "frameworks": ["Laravel"],
+        "branch-alias": {
+          "dev-master": "0.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\AWS\\AWSSMSServiceProvider"
+            ]
+        }
     }
 }
